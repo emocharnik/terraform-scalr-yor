@@ -40,7 +40,7 @@ def cli():
     multiple=False,
     help="Run identifier",
 )
-def get_tags(hostname: str, token: str, run_id: str, delimiter: str):
+def get_tags(hostname: str, token: str, run_id: str, delimiter : str = ":"):
     def _fetch(route):
         response = requests.get(
             f"https://{hostname}/api/iacp/v3/{route}",
